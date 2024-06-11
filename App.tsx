@@ -24,8 +24,22 @@ function App(): React.JSX.Element {
   const [firstName, onChangefirstName] = React.useState('');
   const [lastName, onChangelastName] = React.useState('');
   const [email, onChangeemail] = React.useState('');
-  const [password, onChangepassword] = React.useState('')
+  const [password, onChangepassword] = React.useState('');
   const [phone, onChangephone] = React.useState('');
+
+  const handlePress = () => {
+    if (!firstName || !lastName || !email || !password || !phone) {
+      return Alert.alert('All the fields are required');
+    }
+    return (
+      onChangeemail(''),
+      onChangefirstName(''),
+      onChangelastName(''),
+      onChangepassword(''),
+      onChangephone(''),
+      Alert.alert('Thanks for Your Submission!')
+    );
+  };
 
   return (
     <SafeAreaView>
@@ -69,17 +83,15 @@ function App(): React.JSX.Element {
             placeholder={'987654321'}
             secureTextEntry={false}
           />
-          <Label text={'Enter Password'} />
+          <Label text={'Create Password'} />
           <FormInput
             value={password}
             onChangeText={e => onChangepassword(e)}
             placeholder={'**********'}
             secureTextEntry={true}
           />
-          <Pressable
-            style={styles.button}
-            onPress={() => Alert.alert('Your Account has been Created')}>
-            <Text style={styles.btntext}>{'Create Account'}</Text>
+          <Pressable style={styles.button} onPress={() => handlePress()}>
+            <Text style={styles.btntext}>{'Create Your Account'}</Text>
           </Pressable>
         </View>
       </ScrollView>
