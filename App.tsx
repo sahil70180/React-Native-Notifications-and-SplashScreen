@@ -6,90 +6,81 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
+  Pressable,
+  Alert,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+import Header from './components/Header';
+import Label from './components/Label';
+import FormInput from './components/FormInput';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const [firstName, onChangefirstName] = React.useState('');
+  const [lastName, onChangelastName] = React.useState('');
+  const [email, onChangeemail] = React.useState('');
+  const [password, onChangepassword] = React.useState('')
+  const [phone, onChangephone] = React.useState('');
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
+    <SafeAreaView>
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
         <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+        <View>
+          <Text
+            style={{
+              paddingLeft: 15,
+              paddingTop: 15,
+              fontSize: 20,
+              fontWeight: '900',
+            }}>
+            Create Your Account
+          </Text>
+          <Label text={'Enter First Name'} />
+          <FormInput
+            value={firstName}
+            onChangeText={e => onChangefirstName(e)}
+            placeholder={'John'}
+            secureTextEntry={false}
+          />
+          <Label text={'Enter Last Name'} />
+          <FormInput
+            value={lastName}
+            onChangeText={e => onChangelastName(e)}
+            placeholder={'Doe'}
+            secureTextEntry={false}
+          />
+          <Label text={'Enter Email'} />
+          <FormInput
+            value={email}
+            onChangeText={e => onChangeemail(e)}
+            placeholder={'someone@gmail.com'}
+            secureTextEntry={false}
+          />
+          <Label text={'Enter Phone No'} />
+          <FormInput
+            value={phone}
+            onChangeText={e => onChangephone(e)}
+            placeholder={'987654321'}
+            secureTextEntry={false}
+          />
+          <Label text={'Enter Password'} />
+          <FormInput
+            value={password}
+            onChangeText={e => onChangepassword(e)}
+            placeholder={'**********'}
+            secureTextEntry={true}
+          />
+          <Pressable
+            style={styles.button}
+            onPress={() => Alert.alert('Your Account has been Created')}>
+            <Text style={styles.btntext}>{'Create Account'}</Text>
+          </Pressable>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -112,6 +103,25 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
+    marginHorizontal: 12,
+    marginVertical: 18,
+    marginBottom: 10,
+  },
+  btntext: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
   },
 });
 
