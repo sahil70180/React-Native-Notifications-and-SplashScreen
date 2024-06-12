@@ -31,6 +31,14 @@ function App(): React.JSX.Element {
     if (!firstName || !lastName || !email || !password || !phone) {
       return Alert.alert('All the fields are required');
     }
+    const formData = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+      phone: phone,
+    };
+    console.log('Form Data :', formData);
     return (
       onChangeemail(''),
       onChangefirstName(''),

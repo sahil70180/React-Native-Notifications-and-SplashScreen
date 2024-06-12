@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Gwendolyn-Bold.ttf",
+      "sha1": "bf57af5344fb5f55d73307a05ca530ef67f23c1d"
+    },
+    {
+      "path": "assets/fonts/Gwendolyn-Regular.ttf",
+      "sha1": "ac562d7f82adb945dd45ee84094528c6a533f396"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "sha1": "1a6efa7d11ef494e63bd3f67f8e04907385a962f"
+    }
+  ]
+}
