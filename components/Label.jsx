@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 14,
     fontWeight: 'bold',
-    marginLeft : 18,
+    marginLeft : 12,
     marginTop : 12
   },
 });

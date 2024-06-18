@@ -17,6 +17,7 @@
 		07147E95CFFE4D5B9E186F85 /* Gwendolyn-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41738BD54E5F4079AF79D431 /* Gwendolyn-Bold.ttf */; };
 		6548E1EDE5BC4A2E89D92AFD /* Gwendolyn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACB2A17FD8E94F178AD484DF /* Gwendolyn-Regular.ttf */; };
 		8B0E24096E2B453D9919AC69 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A45215A6CED4BFA8537E5E1 /* OFL.txt */; };
+		458769EE9F404479B9966ECF /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE59A7AF41A453EA987A70D /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		41738BD54E5F4079AF79D431 /* Gwendolyn-Bold.ttf */ = {isa = PBXFileReference; name = "Gwendolyn-Bold.ttf"; path = "../assets/fonts/Gwendolyn-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		ACB2A17FD8E94F178AD484DF /* Gwendolyn-Regular.ttf */ = {isa = PBXFileReference; name = "Gwendolyn-Regular.ttf"; path = "../assets/fonts/Gwendolyn-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4A45215A6CED4BFA8537E5E1 /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../assets/fonts/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5DE59A7AF41A453EA987A70D /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "myapp/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				5DE59A7AF41A453EA987A70D /* BootSplash.storyboard */,
 			);
 			name = myapp;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				07147E95CFFE4D5B9E186F85 /* Gwendolyn-Bold.ttf in Resources */,
 				6548E1EDE5BC4A2E89D92AFD /* Gwendolyn-Regular.ttf in Resources */,
 				8B0E24096E2B453D9919AC69 /* OFL.txt in Resources */,
+				458769EE9F404479B9966ECF /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
